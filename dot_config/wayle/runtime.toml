@@ -1,0 +1,50 @@
+[bar]
+scale = 0.75
+inset-edge = 0.5
+inset-ends = 0.5
+background-opacity = 67
+rounding = "md"
+shadow = "drop"
+
+[[bar.layout]]
+monitor = "*"
+show = true
+left = [
+    "dashboard",
+    "hyprsunset",
+    "idle-inhibit",
+    "media",
+    "hyprland-workspaces",
+]
+center = ["clock"]
+right = [
+    "systray",
+    "bluetooth",
+    "network",
+    { name = "group", modules = [
+    "volume",
+    "microphone",
+] },
+    "battery",
+]
+
+[modules.clock]
+format = "%a %b %d %H:%M"
+dropdown-show-seconds = true
+
+[modules.hyprland-workspaces]
+display-mode = "icon"
+numbering = "relative"
+app-icons-show = true
+
+[modules.hyprsunset]
+label-show = false
+
+[modules.idle-inhibit]
+label-show = false
+
+[modules.microphone]
+label-show = false
+
+[wallpaper]
+engine-enabled = false
